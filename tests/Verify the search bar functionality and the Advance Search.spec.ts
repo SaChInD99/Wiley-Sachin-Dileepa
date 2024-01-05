@@ -39,12 +39,3 @@ test('Verify the search bar functionality and the Advance Search', async ({ page
   //then check the Resource Heading and verify it's visible
   //after that click the Advance Search link and redirect to advance search page
 
-test('get started link', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
-
-  // Click the get started link.
-  await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
-});
