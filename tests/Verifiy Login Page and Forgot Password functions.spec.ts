@@ -1,21 +1,21 @@
 import { test, expect } from '@playwright/test';
 
 
-const LOGIN :"//div[@class='pull-right']//a" = "//div[@class='pull-right']//a"
+const LOGIN :"//div[@class='pull-right']//a" = "//div[@class='pull-right']//a";
 const EMAIL :"//input[@name='login']" = "//input[@name='login']";
-const PASSWORD :"//input[@name='password']" = "//input[@name='password']"
-const SUBMIT :"//div[@class='align-end']//span" = "//div[@class='align-end']//span"
-const FORGOTEMAIL :"//input[@class='email last-tab-item']" = "//input[@class='email last-tab-item']"
-const FORGOTCLOSE :"//div[@class='email last-tab-item']" = "//div[@class='email last-tab-item']"
+const PASSWORD :"//input[@name='password']" = "//input[@name='password']";
+const SUBMIT :"//div[@class='align-end']//span" = "//div[@class='align-end']//span";
+const FORGOTEMAIL :"//input[@class='email last-tab-item']" = "//input[@class='email last-tab-item']";
+const FORGOTCLOSE :"//div[@class='email last-tab-item']" = "//div[@class='email last-tab-item']";
 
 test('Verifiy Login Page and Forgot Password functions', async ({ page }) => {
     await page.goto('https://onlinelibrary.wiley.com/');
 
     // Expect a title "to contain" a substring.
-    await expect(page).toHaveTitle(/Wiley Online Library | Scientific research articles, journals, books, and reference works/)
+    await expect(page).toHaveTitle(/Wiley Online Library | Scientific research articles, journals, books, and reference works/);
 
     await page.evaluate(() => {
-        window.scrollBy(0, 50)
+        window.scrollBy(0, 50);
     });
     
     // Click the login register link
@@ -53,7 +53,7 @@ test('Verifiy Login Page and Forgot Password functions', async ({ page }) => {
     //Fill the email field
     await page.locator(FORGOTEMAIL).fill("sachindileepa41@gmail.com");
 
-    await  page.waitForTimeout(3000)
+    await  page.waitForTimeout(3000);
 
     await page.close();
 

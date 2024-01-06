@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 const SEARCH_BAR :"//input[@id='searchField1']" = '//input[@id=\'searchField1\']';
-const ADVANCEDSEARCH :"//div[@class=\"advanced-search-link-wrapper\"]//a" = "//div[@class=\"advanced-search-link-wrapper\"]//a"
+const ADVANCEDSEARCH :"//div[@class=\"advanced-search-link-wrapper\"]//a" = "//div[@class=\"advanced-search-link-wrapper\"]//a";
 const ANIMAL :"Animal Blood Groups and Biochemical Genetics" = "Animal Blood Groups and Biochemical Genetics";
 const FISH :"Shark" = "Shark";
 
@@ -24,7 +24,7 @@ test('Verify the search bar functionality and the Advance Search', async ({ page
   // Checking the Resource Heading
   await expect(page.getByRole('heading', { name: 'Resources' })).toBeVisible();
 
-  await  page.waitForTimeout(3000)
+  await  page.waitForTimeout(3000);
  
   // Click the Advance Search
   await page.locator(ADVANCEDSEARCH).click();
