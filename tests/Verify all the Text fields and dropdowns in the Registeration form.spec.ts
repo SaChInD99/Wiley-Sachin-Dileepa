@@ -60,12 +60,10 @@ test('Verify all the Text fields and dropdowns in the Registeration form', async
   //HOVER
   await page.locator(DROP).hover();
 
-  await  page.waitForTimeout(3000);
 
   //Click area of interest dropdown
   await page.locator(DROPDOWN2).click();
 
-  await  page.waitForTimeout(3000);
    
   await page.close();
 
